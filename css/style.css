@@ -1,0 +1,372 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.blackhole {
+  max-width: 900px;
+  max-height: 900px;
+  width: 120%;
+  height: 120%;
+  background: #000;
+  box-shadow: 0 0 25px rgba(255, 180, 80, 0.7), 0 0 60px rgba(255, 150, 40, 0.5), 0 0 120px rgba(255, 120, 20, 0.35), inset 0 0 40px rgba(255, 200, 150, 0.4);
+  background: linear-gradient(135deg, #0d0d0d 0%, #3c1f0f 25%, #e2872a 50%, #f7d9a4 75%, #ffffff 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  animation: core 10s infinite linear;
+}
+@keyframes core {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.blackhole__core {
+  max-width: 640px;
+  max-height: 644px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 0 25px rgba(255, 180, 80, 0.7), 0 0 60px rgba(255, 150, 40, 0.5), 0 0 120px rgba(255, 120, 20, 0.35), inset 0 0 40px rgba(255, 200, 150, 0.4);
+  background: #000;
+  transform: translate(-50%, -50%);
+  animation: blackhole 10s infinite linear;
+}
+@keyframes blackhole {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.blackhole__ray {
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  animation: ray 7s infinite linear;
+}
+@keyframes ray {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.blackhole__ray2 {
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  animation: ray2 7s infinite linear;
+}
+@keyframes ray2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.blackhole__task {
+  width: 350px;
+  height: 150px;
+  border: 1px solid #000000;
+  background: linear-gradient(135deg, #0d0d0d 0%, #3c1f0f 25%, #e2872a 50%, #f7d9a4 75%, #ffffff 100%);
+  box-shadow: 0 0 25px rgba(255, 180, 80, 0.7), 0 0 60px rgba(255, 150, 40, 0.5), 0 0 120px rgba(255, 120, 20, 0.35), inset 0 0 40px rgba(255, 200, 150, 0.4);
+  border: 1px solid #000000;
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  animation: task 10s infinite linear;
+}
+@keyframes task {
+  0% {
+    width: 350px;
+    height: 150px;
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    width: 250px;
+    height: 100px;
+    left: -10%;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+header {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+header h1 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+
+.todo {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 20px;
+  background: #000;
+}
+.todo__form {
+  width: 300px;
+  border: 2px dashed #636363;
+  border-radius: 15px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 10px;
+}
+.todo__input {
+  width: 150px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  outline: none;
+}
+.todo__btn {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  background-color: #fff;
+  cursor: pointer;
+}
+.todo__btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+.todo__btn:active {
+  background-color: #fff;
+  color: #000;
+}
+.todo__list {
+  width: 400px;
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #000;
+  box-shadow: 0 0 25px rgba(255, 180, 80, 0.7), 0 0 60px rgba(255, 150, 40, 0.5), 0 0 120px rgba(255, 120, 20, 0.35), inset 0 0 40px rgba(255, 200, 150, 0.4);
+  border: 1px solid #000000;
+  border-radius: 15px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  z-index: 20;
+}
+.todo__list .task {
+  width: 350px;
+  height: 150px;
+  border: 1px solid #000000;
+  background: linear-gradient(135deg, #0d0d0d 0%, #3c1f0f 25%, #e2872a 50%, #f7d9a4 75%, #ffffff 100%);
+  box-shadow: 0 0 25px rgba(255, 180, 80, 0.7), 0 0 60px rgba(255, 150, 40, 0.5), 0 0 120px rgba(255, 120, 20, 0.35), inset 0 0 40px rgba(255, 200, 150, 0.4);
+  border: 1px solid #000000;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.todo__list .task .task__content {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.todo__list .task .task__content .task__text {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+  color: #e2872a;
+}
+.todo__list .task .info {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.todo__list .task .info .info__input {
+  width: 300px;
+  height: 60px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background: inherit;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: start;
+  color: #e2872a;
+  outline: none;
+}
+.todo__list .task .done {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.todo__list .task .done__btn {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.todo__list .task .done__btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+.todo__list .task .done__btn:active {
+  background-color: #fff;
+  color: #000;
+}
+.todo__list .task .done .edit__btn {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.todo__list .task .done .edit__btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+.todo__list .task .done .edit__btn:active {
+  background-color: #fff;
+  color: #000;
+}
+.todo__list .task .done .clear__btn {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.todo__list .task .done .clear__btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+.todo__list .task .done .clear__btn:active {
+  background-color: #fff;
+  color: #000;
+}
+.todo__list .task .done .delete__btn {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.todo__list .task .done .delete__btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+.todo__list .task .done .delete__btn:active {
+  background-color: #fff;
+  color: #000;
+}/*# sourceMappingURL=style.css.map */

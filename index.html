@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+
+    <header>
+        <h1>My To-do List</h1>
+    </header>
+
+    <main>
+        <div class="blackhole">
+            <div class="blackhole__ray"></div>
+            <div class="blackhole__ray2"></div>
+            <div class="blackhole__core"></div>
+        </div>
+        <section class="todo">
+            <form action="" class="todo__form" id="form">
+                <input type="text" class="todo__input" id="input" placeholder="Enter your task" required>
+                <button class="todo__btn" type="submit" id="btn">Add</button>
+            </form>
+            <ul class="todo__list" id="list">
+            </ul>
+        </section>
+        <div class="blackhole__task">
+                <div class="task__content">
+                    <span class="task__text"></span>
+                    <span class="date"></span>
+                </div>
+
+                <div class="info">
+                    <input type="text" class="info__input" placeholder="Enter your plan" >
+                </div>
+
+                <div class="done">
+                    <button class="done__btn">Done</button>
+                    <button class="edit__btn">Edit</button>
+                    <button class="clear__btn">Clear</button>
+                    <button class="delete__btn">Delete</button>
+                </div>
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
