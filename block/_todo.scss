@@ -124,24 +124,24 @@
     gap: 10px;
     position: absolute;
     top: 50%;
-    left: 80%;
+    left: 50%;
     transform: translate(-50%, -50%); 
-    z-index: 10;
+    z-index: 11;
     animation: task 10s infinite linear;
-    @keyframes task{ 
-        0%{
-            width: 350px;
-            height: 150px;
-            left: 80%;
-            transform: translate(-50%, -50%) rotate(0deg);
-        }
-        100%{
-            width: 250px;
-            height: 100px;
-            left: -10%;
-            transform: translate(-50%, -50%) rotate(360deg);
-        }
-    }
+                @keyframes task{ 
+                    0%{
+                        width: 350px;
+                        height: 150px;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(0deg);
+                    }
+                    100%{
+                        width: 250px;
+                        height: 100px;
+                        left: -10%;
+                        transform: translate(-50%, -50%) rotate(360deg);
+                        }
+                    }
 }
 
 header{
@@ -155,7 +155,7 @@ header{
         font-weight: 600;
         font-size: 36px;
         line-height: 42px;
-        color: #000000;
+        color: #ffffff;
     }
 }
 
@@ -168,7 +168,14 @@ header{
     justify-content: center;
     padding: 20px 0;
     gap: 20px;
-    background: #000;
+
+    h2{
+        height: 45px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 42px;
+        color: #ffffff;
+    }
 
     &__form{
         width: 300px;
@@ -222,7 +229,7 @@ header{
         height: 600px;
         overflow-y: auto;
         overflow-x: hidden;
-        background: #000;
+        background: inherit;
         box-shadow: 0 0 25px rgba(255, 180, 80, 0.7),
         0 0 60px rgba(255, 150, 40, 0.5),
         0 0 120px rgba(255, 120, 20, 0.35),
@@ -235,7 +242,7 @@ header{
         align-items: center;
         padding: 20px ;
         gap: 10px;
-        z-index: 20;
+        z-index: 9;
 
         .task{
             width: 350px;
@@ -413,3 +420,151 @@ header{
         }
     }
 }
+
+
+.sun{
+    max-width: 740px;
+    max-height: 744px;
+    width: 80%;
+    height: 80%;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 217, 0);
+    border: none;
+    border-radius: 50%;
+        box-shadow: 0 0 1500px 100px rgb(255, 196, 0);
+        position: absolute;
+        top: 50%;
+        left: 200%;
+        transform: translate(-50%, -50%);
+        animation: sun 10s infinite linear;
+        @keyframes sun{ 
+            0%{
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100%{
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        &__core{
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #fff200, #ffbb00, #ffc400);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &__corona{
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0));
+            border-radius: 50%;
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            animation: corona 5s infinite linear;
+            @keyframes corona{ 
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        &__ray{
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0));
+            border-radius: 50%;
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            animation: ray 7s infinite linear;
+            @keyframes ray{ 
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        &__mercury{
+            width: 20px;
+            height: 20px;
+            background: gray;
+            border-radius: 50%;
+            position: absolute;
+            top: 95%;
+            left: 80%;
+            animation: mercuryOrbit 30s infinite linear;
+            @keyframes mercuryOrbit{ 
+                0%{
+                    transform: rotate(0deg) translateX(120%) rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg) translateX(120%) rotate(-360deg);
+                }
+            }
+        }
+        &__venus{
+            width: 30px;
+            height: 30px;
+            background: #e6c27c;
+            border-radius: 50%;
+            position: absolute;
+            top: 60%;
+            left: 115%;
+            animation: venusOrbit 35s infinite linear;
+            @keyframes venusOrbit{ 
+                0%{
+                    transform: rotate(0deg) translateX(150%) rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg) translateX(150%) rotate(-360deg);
+                }
+            }
+        }
+        &__earth{
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(45deg, #2f9600, #2249b3);
+            border-radius: 50%;
+            position: absolute;
+            top: 80%;
+            left: 120%;
+            animation: earthOrbit 45s infinite linear;
+            @keyframes earthOrbit{ 
+                0%{
+                    transform: rotate(0deg) translateX(180%) rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg) translateX(180%) rotate(-360deg);
+                }
+            }
+            &__moon{
+                width: 10px;
+                height: 10px;
+                background: #bbb;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 120%;
+                animation: moonOrbit 5s infinite linear;
+                @keyframes moonOrbit{ 
+                    0%{
+                        transform: rotate(0deg) translateX(150%) rotate(0deg);
+                    }
+                    100%{
+                        transform: rotate(360deg) translateX(150%) rotate(-360deg);
+                    }
+                }
+            }
+        }
+    }
